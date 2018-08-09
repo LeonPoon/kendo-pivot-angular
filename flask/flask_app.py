@@ -10,57 +10,57 @@ CORS(app)
 
 
 expand2006 = {
-  "rows[0][name][]": [
-    "[Geography].[City].[All Geographies]"
-  ],
   "columns[0][name][]": [
     "[Date].[Calendar].[Calendar Year].&[2006]"
-  ],
-  "columns[1][expand]": [
-    "false"
   ],
   "columns[0][expand]": [
     "true"
   ],
-  "measuresAxis": [
-    "columns"
+  "columns[1][name][]": [
+    "[Product].[Category].[All Products]"
+  ],
+  "columns[1][expand]": [
+    "false"
+  ],
+  "rows[0][name][]": [
+    "[Geography].[City].[All Geographies]"
   ],
   "rows[0][expand]": [
     "false"
   ],
-  "columns[1][name][]": [
-    "[Product].[Category].[All Products]"
+  "measuresAxis": [
+    "columns"
   ]
 }
 
 
 expand_geog = {
-  "columns[1][expand]": [
+  "columns[0][name][]": [
+    "[Date].[Calendar].[All Periods]"
+  ],
+  "columns[0][expand]": [
     "true"
   ],
-  "columns[2][expand]": [
-    "false"
+  "columns[1][name][]": [
+    "[Date].[Calendar].[Calendar Year].&[2006]"
+  ],
+  "columns[1][expand]": [
+    "true"
   ],
   "columns[2][name][]": [
     "[Product].[Category].[All Products]"
   ],
-  "columns[1][name][]": [
-    "[Date].[Calendar].[Calendar Year].&[2006]"
+  "columns[2][expand]": [
+    "false"
+  ],
+  "rows[0][name][]": [
+    "[Geography].[City].[All Geographies]"
   ],
   "rows[0][expand]": [
     "true"
   ],
   "measuresAxis": [
     "columns"
-  ],
-  "columns[0][expand]": [
-    "true"
-  ],
-  "columns[0][name][]": [
-    "[Date].[Calendar].[All Periods]"
-  ],
-  "rows[0][name][]": [
-    "[Geography].[City].[All Geographies]"
   ]
 }
 
