@@ -65,6 +65,30 @@ expand_geog = {
 }
 
 
+expand2008 = {
+  "columns[0][name][]": [
+    "[Date].[Calendar].[Calendar Year].&[2008]"
+  ],
+  "columns[0][expand]": [
+    "true"
+  ],
+  "columns[1][name][]": [
+    "[Product].[Category].[All Products]"
+  ],
+  "columns[1][expand]": [
+    "false"
+  ],
+  "measuresAxis": [
+    "columns"
+  ],
+  "rows[0][name][]": [
+    "[Geography].[City].[All Geographies]"
+  ],
+  "rows[0][expand]": [
+    "true"
+  ]
+}
+
 demo = os.path.join(os.path.dirname(__file__), '..', 'demo')
 
 
@@ -78,6 +102,8 @@ def index():
         path = os.path.join(demo, 'demo2-expand-2006.json')
     elif request.args == expand_geog:
         path = os.path.join(demo, 'demo3-expand-all-geog.json')
+    elif request.args == expand2008:
+        path = os.path.join(demo, 'demo3-expand-2008.json')
     if path:
         with open(path, 'r') as data:
             data = json.load(data)
