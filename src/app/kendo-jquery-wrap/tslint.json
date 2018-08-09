@@ -1,0 +1,17 @@
+{
+  "extends": "../../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "kendo-jquery-wrap",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "kendo-jquery-wrap",
+      "kebab-case"
+    ]
+  }
+}

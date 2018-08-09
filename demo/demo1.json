@@ -1,0 +1,166 @@
+{
+    "axes": {
+        "columns": {
+            "tuples": [
+                {
+                    "members": [
+                        {
+                            "children": [],
+                            "caption": "All Periods",
+                            "name": "[Date].[Calendar].[All Periods]",
+                            "levelName": "[Date].[Calendar].[(All)]",
+                            "levelNum": "0",
+                            "hasChildren": true,
+                            "hierarchy": "[Date].[Calendar]"
+                        },
+                        {
+                            "children": [],
+                            "caption": "All Products",
+                            "name": "[Product].[Category].[All Products]",
+                            "levelName": "[Product].[Category].[(All)]",
+                            "levelNum": "0",
+                            "hasChildren": true,
+                            "hierarchy": "[Product].[Category]"
+                        }
+                    ]
+                },
+                {
+                    "members": [
+                        {
+                            "children": [],
+                            "caption": "CY 2005",
+                            "name": "[Date].[Calendar].[Calendar Year].&[2005]",
+                            "levelName": "[Date].[Calendar].[Calendar Year]",
+                            "levelNum": "1",
+                            "hasChildren": true,
+                            "parentName": "[Date].[Calendar].[All Periods]",
+                            "hierarchy": "[Date].[Calendar]"
+                        },
+                        {
+                            "children": [],
+                            "caption": "All Products",
+                            "name": "[Product].[Category].[All Products]",
+                            "levelName": "[Product].[Category].[(All)]",
+                            "levelNum": "0",
+                            "hasChildren": true,
+                            "hierarchy": "[Product].[Category]"
+                        }
+                    ]
+                },
+                {
+                    "members": [
+                        {
+                            "children": [],
+                            "caption": "CY 2006",
+                            "name": "[Date].[Calendar].[Calendar Year].&[2006]",
+                            "levelName": "[Date].[Calendar].[Calendar Year]",
+                            "levelNum": "1",
+                            "hasChildren": true,
+                            "parentName": "[Date].[Calendar].[All Periods]",
+                            "hierarchy": "[Date].[Calendar]"
+                        },
+                        {
+                            "children": [],
+                            "caption": "All Products",
+                            "name": "[Product].[Category].[All Products]",
+                            "levelName": "[Product].[Category].[(All)]",
+                            "levelNum": "0",
+                            "hasChildren": true,
+                            "hierarchy": "[Product].[Category]"
+                        }
+                    ]
+                },
+                {
+                    "members": [
+                        {
+                            "children": [],
+                            "caption": "CY 2007",
+                            "name": "[Date].[Calendar].[Calendar Year].&[2007]",
+                            "levelName": "[Date].[Calendar].[Calendar Year]",
+                            "levelNum": "1",
+                            "hasChildren": true,
+                            "parentName": "[Date].[Calendar].[All Periods]",
+                            "hierarchy": "[Date].[Calendar]"
+                        },
+                        {
+                            "children": [],
+                            "caption": "All Products",
+                            "name": "[Product].[Category].[All Products]",
+                            "levelName": "[Product].[Category].[(All)]",
+                            "levelNum": "0",
+                            "hasChildren": true,
+                            "hierarchy": "[Product].[Category]"
+                        }
+                    ]
+                },
+                {
+                    "members": [
+                        {
+                            "children": [],
+                            "caption": "CY 2008",
+                            "name": "[Date].[Calendar].[Calendar Year].&[2008]",
+                            "levelName": "[Date].[Calendar].[Calendar Year]",
+                            "levelNum": "1",
+                            "hasChildren": true,
+                            "parentName": "[Date].[Calendar].[All Periods]",
+                            "hierarchy": "[Date].[Calendar]"
+                        },
+                        {
+                            "children": [],
+                            "caption": "All Products",
+                            "name": "[Product].[Category].[All Products]",
+                            "levelName": "[Product].[Category].[(All)]",
+                            "levelNum": "0",
+                            "hasChildren": true,
+                            "hierarchy": "[Product].[Category]"
+                        }
+                    ]
+                }
+            ]
+        },
+        "rows": {
+            "tuples": [
+                {
+                    "members": [
+                        {
+                            "children": [],
+                            "caption": "All Geographies",
+                            "name": "[Geography].[City].[All Geographies]",
+                            "levelName": "[Geography].[City].[(All)]",
+                            "levelNum": "0",
+                            "hasChildren": true,
+                            "hierarchy": "[Geography].[City]"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "data": [
+        {
+            "value": "2011265.9158",
+            "fmtValue": "$2,011,265.92",
+            "ordinal": 0
+        },
+        {
+            "value": "201635.9213",
+            "fmtValue": "$201,635.92",
+            "ordinal": 1
+        },
+        {
+            "value": "603610.9428",
+            "fmtValue": "$603,610.94",
+            "ordinal": 2
+        },
+        {
+            "value": "805067.1946",
+            "fmtValue": "$805,067.19",
+            "ordinal": 3
+        },
+        {
+            "value": "400951.8571",
+            "fmtValue": "$400,951.86",
+            "ordinal": 4
+        }
+    ]
+}

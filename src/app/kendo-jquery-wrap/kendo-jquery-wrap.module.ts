@@ -4,7 +4,7 @@ import { PivotGridComponent } from './components/pivot-grid/pivot-grid.component
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
   ],
   declarations: [
     PivotGridComponent,
