@@ -13,4 +13,4 @@ set | egrep ^PREFIX=
 
 virtualenv -p $(which python3) "$PREFIX"
 
-"$PREFIX/bin/pip3" install Flask pylint flask_cors
+"$PREFIX/bin/pip3" install Flask pylint flask_cors regex

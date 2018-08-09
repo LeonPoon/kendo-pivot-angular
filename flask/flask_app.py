@@ -1,112 +1,66 @@
 #!/usr/bin/env python3
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, abort
 from flask_cors import CORS
 import json
 import os
+import regex
 
 app = Flask(__name__)
 CORS(app)
 
 
-expand2006 = {
-  "columns[0][name][]": [
-    "[Date].[Calendar].[Calendar Year].&[2006]"
-  ],
-  "columns[0][expand]": [
-    "true"
-  ],
-  "columns[1][name][]": [
-    "[Product].[Category].[All Products]"
-  ],
-  "columns[1][expand]": [
-    "false"
-  ],
-  "rows[0][name][]": [
-    "[Geography].[City].[All Geographies]"
-  ],
-  "rows[0][expand]": [
-    "false"
-  ],
-  "measuresAxis": [
-    "columns"
-  ]
-}
-
-
-expand_geog = {
-  "columns[0][name][]": [
-    "[Date].[Calendar].[All Periods]"
-  ],
-  "columns[0][expand]": [
-    "true"
-  ],
-  "columns[1][name][]": [
-    "[Date].[Calendar].[Calendar Year].&[2006]"
-  ],
-  "columns[1][expand]": [
-    "true"
-  ],
-  "columns[2][name][]": [
-    "[Product].[Category].[All Products]"
-  ],
-  "columns[2][expand]": [
-    "false"
-  ],
-  "rows[0][name][]": [
-    "[Geography].[City].[All Geographies]"
-  ],
-  "rows[0][expand]": [
-    "true"
-  ],
-  "measuresAxis": [
-    "columns"
-  ]
-}
-
-
-expand2008 = {
-  "columns[0][name][]": [
-    "[Date].[Calendar].[Calendar Year].&[2008]"
-  ],
-  "columns[0][expand]": [
-    "true"
-  ],
-  "columns[1][name][]": [
-    "[Product].[Category].[All Products]"
-  ],
-  "columns[1][expand]": [
-    "false"
-  ],
-  "measuresAxis": [
-    "columns"
-  ],
-  "rows[0][name][]": [
-    "[Geography].[City].[All Geographies]"
-  ],
-  "rows[0][expand]": [
-    "true"
-  ]
-}
-
 demo = os.path.join(os.path.dirname(__file__), '..', 'demo')
+
+
+def deserialise_jquery_to(obj, pk, k_gen, v):
+    k = next(k_gen, None)
+    if k:
+        try:
+            k = int(k)
+            is_int = True
+        except ValueError:
+            is_int = False
+        if is_int:
+            if obj is None:
+                obj = []
+            if len(obj) <= k:
+                obj.extend((None,) * (k - len(obj) + 1))
+            o = obj[k]
+        else:
+            if obj is None:
+                obj = {}
+            o = obj.get(k)
+        obj[k] = deserialise_jquery_to(o, k, k_gen, v)
+    elif k == '':
+        if obj is None:
+            obj = [v]
+        else:
+            obj.append(v)
+    elif k is None:
+        obj = v
+    return obj
+
+
+def deserialise_jquery(args, re=regex.compile('^([A-Za-z_][A-Za-z0-9_]*)(?:\\[((?:0|[1-9][0-9]*)|(?:[A-Za-z_][A-Za-z0-9_]*)*)\\])*$')):
+    obj = {}
+    for k, v in args.items():
+        match = re.match(k)
+        if match:
+            (k,), ks = [match.captures(i) for i in range(1, len(match.groups()) + 1)]
+            deserialise_jquery_to(obj, None, (k for k in ((k,), ks) for k in k), (v == 'true') if v in ('true', 'false') else v)
+    return obj
 
 
 @app.route('/')
 def index():
-    print(dict(request.args))
-    path = None
-    if request.args == {'measuresAxis': ['columns']}:
-        path = os.path.join(demo, 'demo1.json')
-    elif request.args == expand2006:
-        path = os.path.join(demo, 'demo2-expand-2006.json')
-    elif request.args == expand_geog:
-        path = os.path.join(demo, 'demo3-expand-all-geog.json')
-    elif request.args == expand2008:
-        path = os.path.join(demo, 'demo3-expand-2008.json')
-    if path:
-        with open(path, 'r') as data:
-            data = json.load(data)
-    else:
-        data = {}
+    args = deserialise_jquery(request.args)
+    data = None
+    for f in os.listdir(demo):
+        with open(os.path.join(demo, f), 'r') as f:
+            f = json.load(f)
+        if f['read'] == args:
+            data = f['data']
+    if data is None:
+        abort(404)
     return jsonify(data)

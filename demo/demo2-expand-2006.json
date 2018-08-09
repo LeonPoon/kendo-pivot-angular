@@ -1,111 +1,158 @@
 {
-    "data": [
-        {
-            "value": "603610.9428",
-            "fmtValue": "$603,610.94",
-            "ordinal": 0
-        },
-        {
-            "value": "205575.2007",
-            "fmtValue": "$205,575.20",
-            "ordinal": 1
-        },
-        {
-            "value": "398035.7421",
-            "fmtValue": "$398,035.74",
-            "ordinal": 2
-        }
+  "read": {
+    "measures": [
+      {
+        "name": "[Measures].[Reseller Freight Cost]"
+      }
     ],
+    "measuresAxis": "columns",
+    "columns": [
+      {
+        "name": [
+          "[Date].[Calendar].[Calendar Year].&[2006]"
+        ],
+        "expand": true
+      },
+      {
+        "name": [
+          "[Product].[Category].[All Products]"
+        ],
+        "expand": false
+      }
+    ],
+    "rows": [
+      {
+        "name": [
+          "[Sales Reason].[Sales Reasons].[All Sales Reasons]"
+        ],
+        "expand": false
+      },
+      {
+        "name": [
+          "[Destination Currency].[Destination Currency Code].[All Destination Currencies]"
+        ],
+        "expand": false
+      }
+    ]
+  },
+  "data": {
     "axes": {
-        "columns": {
-            "tuples": [
-                {
-                    "members": [
-                        {
-                            "children": [],
-                            "caption": "CY 2006",
-                            "name": "[Date].[Calendar].[Calendar Year].&[2006]",
-                            "levelName": "[Date].[Calendar].[Calendar Year]",
-                            "levelNum": "1",
-                            "hasChildren": true,
-                            "parentName": "[Date].[Calendar].[All Periods]",
-                            "hierarchy": "[Date].[Calendar]"
-                        },
-                        {
-                            "children": [],
-                            "caption": "All Products",
-                            "name": "[Product].[Category].[All Products]",
-                            "levelName": "[Product].[Category].[(All)]",
-                            "levelNum": "0",
-                            "hasChildren": true,
-                            "hierarchy": "[Product].[Category]"
-                        }
-                    ]
-                },
-                {
-                    "members": [
-                        {
-                            "children": [],
-                            "caption": "H1 CY 2006",
-                            "name": "[Date].[Calendar].[Calendar Semester].&[2006]&[1]",
-                            "levelName": "[Date].[Calendar].[Calendar Semester]",
-                            "levelNum": "2",
-                            "hasChildren": true,
-                            "parentName": "[Date].[Calendar].[Calendar Year].&[2006]",
-                            "hierarchy": "[Date].[Calendar]"
-                        },
-                        {
-                            "children": [],
-                            "caption": "All Products",
-                            "name": "[Product].[Category].[All Products]",
-                            "levelName": "[Product].[Category].[(All)]",
-                            "levelNum": "0",
-                            "hasChildren": true,
-                            "hierarchy": "[Product].[Category]"
-                        }
-                    ]
-                },
-                {
-                    "members": [
-                        {
-                            "children": [],
-                            "caption": "H2 CY 2006",
-                            "name": "[Date].[Calendar].[Calendar Semester].&[2006]&[2]",
-                            "levelName": "[Date].[Calendar].[Calendar Semester]",
-                            "levelNum": "2",
-                            "hasChildren": true,
-                            "parentName": "[Date].[Calendar].[Calendar Year].&[2006]",
-                            "hierarchy": "[Date].[Calendar]"
-                        },
-                        {
-                            "children": [],
-                            "caption": "All Products",
-                            "name": "[Product].[Category].[All Products]",
-                            "levelName": "[Product].[Category].[(All)]",
-                            "levelNum": "0",
-                            "hasChildren": true,
-                            "hierarchy": "[Product].[Category]"
-                        }
-                    ]
-                }
+      "columns": {
+        "tuples": [
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "CY 2006",
+                "name": "[Date].[Calendar].[Calendar Year].&[2006]",
+                "levelName": "[Date].[Calendar].[Calendar Year]",
+                "levelNum": "1",
+                "hasChildren": true,
+                "parentName": "[Date].[Calendar].[All Periods]",
+                "hierarchy": "[Date].[Calendar]"
+              },
+              {
+                "children": [],
+                "caption": "All Products",
+                "name": "[Product].[Category].[All Products]",
+                "levelName": "[Product].[Category].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Product].[Category]"
+              }
             ]
-        },
-        "rows": {
-            "tuples": [
-                {
-                    "members": [
-                        {
-                            "children": [],
-                            "caption": "All Geographies",
-                            "name": "[Geography].[City].[All Geographies]",
-                            "levelName": "[Geography].[City].[(All)]",
-                            "levelNum": "0",
-                            "hasChildren": true,
-                            "hierarchy": "[Geography].[City]"
-                        }
-                    ]
-                }
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "H1 CY 2006",
+                "name": "[Date].[Calendar].[Calendar Semester].&[2006]&[1]",
+                "levelName": "[Date].[Calendar].[Calendar Semester]",
+                "levelNum": "2",
+                "hasChildren": true,
+                "parentName": "[Date].[Calendar].[Calendar Year].&[2006]",
+                "hierarchy": "[Date].[Calendar]"
+              },
+              {
+                "children": [],
+                "caption": "All Products",
+                "name": "[Product].[Category].[All Products]",
+                "levelName": "[Product].[Category].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Product].[Category]"
+              }
             ]
-        }
-    }
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "H2 CY 2006",
+                "name": "[Date].[Calendar].[Calendar Semester].&[2006]&[2]",
+                "levelName": "[Date].[Calendar].[Calendar Semester]",
+                "levelNum": "2",
+                "hasChildren": true,
+                "parentName": "[Date].[Calendar].[Calendar Year].&[2006]",
+                "hierarchy": "[Date].[Calendar]"
+              },
+              {
+                "children": [],
+                "caption": "All Products",
+                "name": "[Product].[Category].[All Products]",
+                "levelName": "[Product].[Category].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Product].[Category]"
+              }
+            ]
+          }
+        ]
+      },
+      "rows": {
+        "tuples": [
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "All Sales Reasons",
+                "name": "[Sales Reason].[Sales Reasons].[All Sales Reasons]",
+                "levelName": "[Sales Reason].[Sales Reasons].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Sales Reason].[Sales Reasons]"
+              },
+              {
+                "children": [],
+                "caption": "All Destination Currencies",
+                "name": "[Destination Currency].[Destination Currency Code].[All Destination Currencies]",
+                "levelName": "[Destination Currency].[Destination Currency Code].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Destination Currency].[Destination Currency Code]"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "data": [
+      {
+        "value": "603610.9428",
+        "fmtValue": "$603,610.94",
+        "ordinal": 0
+      },
+      {
+        "value": "205575.2007",
+        "fmtValue": "$205,575.20",
+        "ordinal": 1
+      },
+      {
+        "value": "398035.7421",
+        "fmtValue": "$398,035.74",
+        "ordinal": 2
+      }
+    ]
+  }
 }

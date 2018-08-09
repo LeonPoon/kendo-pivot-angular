@@ -13,6 +13,16 @@ const schema: kendo.data.PivotSchema = {
 };
 
 
+const {columns, rows, measures} = {
+  columns: [{ name: '[Date].[Calendar]', expand: true }, { name: '[Product].[Category]' }],
+  rows: [
+    { name: '[Sales Reason].[Sales Reasons]' },
+    { name: '[Destination Currency].[Destination Currency Code]' },
+  ],
+  measures: ['[Measures].[Reseller Freight Cost]'],
+};
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -30,10 +40,11 @@ export class AppComponent {
 
   jsonOpts() {
     const opts = {
-      height: '100%', // define the height of the widget
+      height: 580,
       dataSource: {
+        columns, rows, measures,
         transport: {
-          read: (options: kendo.data.DataSourceTransportOptions) => options.success(demoData)
+          read: (options: kendo.data.DataSourceTransportOptions) => options.success((demoData as any).data)
         },
         schema,
       }
@@ -43,8 +54,9 @@ export class AppComponent {
 
   ajaxOpts() {
     const opts = {
-      height: '100%', // define the height of the widget
+      height: 580,
       dataSource: {
+        columns, rows, measures,
         transport: {
           read: {
             url: 'http://localhost:5000',
@@ -66,9 +78,7 @@ export class AppComponent {
       height: 580,
       dataSource: {
         type: 'xmla',
-        columns: [{ name: '[Date].[Calendar]', expand: true }, { name: '[Product].[Category]' }],
-        rows: [{ name: '[Geography].[City]' }],
-        measures: ['[Measures].[Reseller Freight Cost]'],
+        columns, rows, measures,
         transport: {
           connection: {
             catalog: 'Adventure Works DW 2008R2',

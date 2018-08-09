@@ -1,0 +1,794 @@
+{
+  "read": {
+    "measures": [
+      {
+        "name": "[Measures].[Reseller Freight Cost]"
+      }
+    ],
+    "measuresAxis": "columns",
+    "columns": [
+      {
+        "name": [
+          "[Date].[Calendar].[Calendar Year].&[2008]"
+        ],
+        "expand": false
+      },
+      {
+        "name": [
+          "[Product].[Category].[All Products]"
+        ],
+        "expand": true
+      }
+    ],
+    "rows": [
+      {
+        "name": [
+          "[Sales Reason].[Sales Reasons].[All Sales Reasons]"
+        ],
+        "expand": false
+      },
+      {
+        "name": [
+          "[Destination Currency].[Destination Currency Code].[All Destination Currencies]"
+        ],
+        "expand": true
+      }
+    ]
+  },
+  "data": {
+    "axes": {
+      "columns": {
+        "tuples": [
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "CY 2008",
+                "name": "[Date].[Calendar].[Calendar Year].&[2008]",
+                "levelName": "[Date].[Calendar].[Calendar Year]",
+                "levelNum": "1",
+                "hasChildren": true,
+                "parentName": "[Date].[Calendar].[All Periods]",
+                "hierarchy": "[Date].[Calendar]"
+              },
+              {
+                "children": [],
+                "caption": "All Products",
+                "name": "[Product].[Category].[All Products]",
+                "levelName": "[Product].[Category].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Product].[Category]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "CY 2008",
+                "name": "[Date].[Calendar].[Calendar Year].&[2008]",
+                "levelName": "[Date].[Calendar].[Calendar Year]",
+                "levelNum": "1",
+                "hasChildren": true,
+                "parentName": "[Date].[Calendar].[All Periods]",
+                "hierarchy": "[Date].[Calendar]"
+              },
+              {
+                "children": [],
+                "caption": "Accessories",
+                "name": "[Product].[Category].&[4]",
+                "levelName": "[Product].[Category].[Category]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Product].[Category].[All Products]",
+                "hierarchy": "[Product].[Category]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "CY 2008",
+                "name": "[Date].[Calendar].[Calendar Year].&[2008]",
+                "levelName": "[Date].[Calendar].[Calendar Year]",
+                "levelNum": "1",
+                "hasChildren": true,
+                "parentName": "[Date].[Calendar].[All Periods]",
+                "hierarchy": "[Date].[Calendar]"
+              },
+              {
+                "children": [],
+                "caption": "Bikes",
+                "name": "[Product].[Category].&[1]",
+                "levelName": "[Product].[Category].[Category]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Product].[Category].[All Products]",
+                "hierarchy": "[Product].[Category]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "CY 2008",
+                "name": "[Date].[Calendar].[Calendar Year].&[2008]",
+                "levelName": "[Date].[Calendar].[Calendar Year]",
+                "levelNum": "1",
+                "hasChildren": true,
+                "parentName": "[Date].[Calendar].[All Periods]",
+                "hierarchy": "[Date].[Calendar]"
+              },
+              {
+                "children": [],
+                "caption": "Clothing",
+                "name": "[Product].[Category].&[3]",
+                "levelName": "[Product].[Category].[Category]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Product].[Category].[All Products]",
+                "hierarchy": "[Product].[Category]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "CY 2008",
+                "name": "[Date].[Calendar].[Calendar Year].&[2008]",
+                "levelName": "[Date].[Calendar].[Calendar Year]",
+                "levelNum": "1",
+                "hasChildren": true,
+                "parentName": "[Date].[Calendar].[All Periods]",
+                "hierarchy": "[Date].[Calendar]"
+              },
+              {
+                "children": [],
+                "caption": "Components",
+                "name": "[Product].[Category].&[2]",
+                "levelName": "[Product].[Category].[Category]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Product].[Category].[All Products]",
+                "hierarchy": "[Product].[Category]"
+              }
+            ]
+          }
+        ]
+      },
+      "rows": {
+        "tuples": [
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "All Sales Reasons",
+                "name": "[Sales Reason].[Sales Reasons].[All Sales Reasons]",
+                "levelName": "[Sales Reason].[Sales Reasons].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Sales Reason].[Sales Reasons]"
+              },
+              {
+                "children": [],
+                "caption": "All Destination Currencies",
+                "name": "[Destination Currency].[Destination Currency Code].[All Destination Currencies]",
+                "levelName": "[Destination Currency].[Destination Currency Code].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Destination Currency].[Destination Currency Code]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "All Sales Reasons",
+                "name": "[Sales Reason].[Sales Reasons].[All Sales Reasons]",
+                "levelName": "[Sales Reason].[Sales Reasons].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Sales Reason].[Sales Reasons]"
+              },
+              {
+                "children": [],
+                "caption": "ARS",
+                "name": "[Destination Currency].[Destination Currency Code].&[3]",
+                "levelName": "[Destination Currency].[Destination Currency Code].[Destination Currency Code]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Destination Currency].[Destination Currency Code].[All Destination Currencies]",
+                "hierarchy": "[Destination Currency].[Destination Currency Code]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "All Sales Reasons",
+                "name": "[Sales Reason].[Sales Reasons].[All Sales Reasons]",
+                "levelName": "[Sales Reason].[Sales Reasons].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Sales Reason].[Sales Reasons]"
+              },
+              {
+                "children": [],
+                "caption": "AUD",
+                "name": "[Destination Currency].[Destination Currency Code].&[6]",
+                "levelName": "[Destination Currency].[Destination Currency Code].[Destination Currency Code]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Destination Currency].[Destination Currency Code].[All Destination Currencies]",
+                "hierarchy": "[Destination Currency].[Destination Currency Code]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "All Sales Reasons",
+                "name": "[Sales Reason].[Sales Reasons].[All Sales Reasons]",
+                "levelName": "[Sales Reason].[Sales Reasons].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Sales Reason].[Sales Reasons]"
+              },
+              {
+                "children": [],
+                "caption": "VEB",
+                "name": "[Destination Currency].[Destination Currency Code].&[14]",
+                "levelName": "[Destination Currency].[Destination Currency Code].[Destination Currency Code]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Destination Currency].[Destination Currency Code].[All Destination Currencies]",
+                "hierarchy": "[Destination Currency].[Destination Currency Code]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "All Sales Reasons",
+                "name": "[Sales Reason].[Sales Reasons].[All Sales Reasons]",
+                "levelName": "[Sales Reason].[Sales Reasons].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Sales Reason].[Sales Reasons]"
+              },
+              {
+                "children": [],
+                "caption": "BRL",
+                "name": "[Destination Currency].[Destination Currency Code].&[16]",
+                "levelName": "[Destination Currency].[Destination Currency Code].[Destination Currency Code]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Destination Currency].[Destination Currency Code].[All Destination Currencies]",
+                "hierarchy": "[Destination Currency].[Destination Currency Code]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "All Sales Reasons",
+                "name": "[Sales Reason].[Sales Reasons].[All Sales Reasons]",
+                "levelName": "[Sales Reason].[Sales Reasons].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Sales Reason].[Sales Reasons]"
+              },
+              {
+                "children": [],
+                "caption": "CAD",
+                "name": "[Destination Currency].[Destination Currency Code].&[19]",
+                "levelName": "[Destination Currency].[Destination Currency Code].[Destination Currency Code]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Destination Currency].[Destination Currency Code].[All Destination Currencies]",
+                "hierarchy": "[Destination Currency].[Destination Currency Code]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "All Sales Reasons",
+                "name": "[Sales Reason].[Sales Reasons].[All Sales Reasons]",
+                "levelName": "[Sales Reason].[Sales Reasons].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Sales Reason].[Sales Reasons]"
+              },
+              {
+                "children": [],
+                "caption": "EUR",
+                "name": "[Destination Currency].[Destination Currency Code].&[36]",
+                "levelName": "[Destination Currency].[Destination Currency Code].[Destination Currency Code]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Destination Currency].[Destination Currency Code].[All Destination Currencies]",
+                "hierarchy": "[Destination Currency].[Destination Currency Code]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "All Sales Reasons",
+                "name": "[Sales Reason].[Sales Reasons].[All Sales Reasons]",
+                "levelName": "[Sales Reason].[Sales Reasons].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Sales Reason].[Sales Reasons]"
+              },
+              {
+                "children": [],
+                "caption": "MXN",
+                "name": "[Destination Currency].[Destination Currency Code].&[61]",
+                "levelName": "[Destination Currency].[Destination Currency Code].[Destination Currency Code]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Destination Currency].[Destination Currency Code].[All Destination Currencies]",
+                "hierarchy": "[Destination Currency].[Destination Currency Code]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "All Sales Reasons",
+                "name": "[Sales Reason].[Sales Reasons].[All Sales Reasons]",
+                "levelName": "[Sales Reason].[Sales Reasons].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Sales Reason].[Sales Reasons]"
+              },
+              {
+                "children": [],
+                "caption": "SAR",
+                "name": "[Destination Currency].[Destination Currency Code].&[85]",
+                "levelName": "[Destination Currency].[Destination Currency Code].[Destination Currency Code]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Destination Currency].[Destination Currency Code].[All Destination Currencies]",
+                "hierarchy": "[Destination Currency].[Destination Currency Code]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "All Sales Reasons",
+                "name": "[Sales Reason].[Sales Reasons].[All Sales Reasons]",
+                "levelName": "[Sales Reason].[Sales Reasons].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Sales Reason].[Sales Reasons]"
+              },
+              {
+                "children": [],
+                "caption": "GBP",
+                "name": "[Destination Currency].[Destination Currency Code].&[98]",
+                "levelName": "[Destination Currency].[Destination Currency Code].[Destination Currency Code]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Destination Currency].[Destination Currency Code].[All Destination Currencies]",
+                "hierarchy": "[Destination Currency].[Destination Currency Code]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "All Sales Reasons",
+                "name": "[Sales Reason].[Sales Reasons].[All Sales Reasons]",
+                "levelName": "[Sales Reason].[Sales Reasons].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Sales Reason].[Sales Reasons]"
+              },
+              {
+                "children": [],
+                "caption": "USD",
+                "name": "[Destination Currency].[Destination Currency Code].&[100]",
+                "levelName": "[Destination Currency].[Destination Currency Code].[Destination Currency Code]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Destination Currency].[Destination Currency Code].[All Destination Currencies]",
+                "hierarchy": "[Destination Currency].[Destination Currency Code]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "All Sales Reasons",
+                "name": "[Sales Reason].[Sales Reasons].[All Sales Reasons]",
+                "levelName": "[Sales Reason].[Sales Reasons].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Sales Reason].[Sales Reasons]"
+              },
+              {
+                "children": [],
+                "caption": "JPY",
+                "name": "[Destination Currency].[Destination Currency Code].&[102]",
+                "levelName": "[Destination Currency].[Destination Currency Code].[Destination Currency Code]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Destination Currency].[Destination Currency Code].[All Destination Currencies]",
+                "hierarchy": "[Destination Currency].[Destination Currency Code]"
+              }
+            ]
+          },
+          {
+            "members": [
+              {
+                "children": [],
+                "caption": "All Sales Reasons",
+                "name": "[Sales Reason].[Sales Reasons].[All Sales Reasons]",
+                "levelName": "[Sales Reason].[Sales Reasons].[(All)]",
+                "levelNum": "0",
+                "hasChildren": true,
+                "hierarchy": "[Sales Reason].[Sales Reasons]"
+              },
+              {
+                "children": [],
+                "caption": "CNY",
+                "name": "[Destination Currency].[Destination Currency Code].&[103]",
+                "levelName": "[Destination Currency].[Destination Currency Code].[Destination Currency Code]",
+                "levelNum": "1",
+                "hasChildren": false,
+                "parentName": "[Destination Currency].[Destination Currency Code].[All Destination Currencies]",
+                "hierarchy": "[Destination Currency].[Destination Currency Code]"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "data": [
+      {
+        "value": "400951.8571",
+        "fmtValue": "$400,951.86",
+        "ordinal": 0
+      },
+      {
+        "value": "4044.8814",
+        "fmtValue": "$4,044.88",
+        "ordinal": 1
+      },
+      {
+        "value": "334981.2313",
+        "fmtValue": "$334,981.23",
+        "ordinal": 2
+      },
+      {
+        "value": "9650.376",
+        "fmtValue": "$9,650.38",
+        "ordinal": 3
+      },
+      {
+        "value": "52275.3684",
+        "fmtValue": "$52,275.37",
+        "ordinal": 4
+      },
+      {
+        "value": "1431529.9254",
+        "fmtValue": "$ 1.431.529,93",
+        "ordinal": 5
+      },
+      {
+        "value": "14481.1487",
+        "fmtValue": "$ 14.481,15",
+        "ordinal": 6
+      },
+      {
+        "value": "1194761.4824",
+        "fmtValue": "$ 1.194.761,48",
+        "ordinal": 7
+      },
+      {
+        "value": "34462.0159",
+        "fmtValue": "$ 34.462,02",
+        "ordinal": 8
+      },
+      {
+        "value": "187825.2773",
+        "fmtValue": "$ 187.825,28",
+        "ordinal": 9
+      },
+      {
+        "value": "727144.6031",
+        "fmtValue": "$727,144.60",
+        "ordinal": 10
+      },
+      {
+        "value": "7354.6567",
+        "fmtValue": "$7,354.66",
+        "ordinal": 11
+      },
+      {
+        "value": "607225.2107",
+        "fmtValue": "$607,225.21",
+        "ordinal": 12
+      },
+      {
+        "value": "17530.4564",
+        "fmtValue": "$17,530.46",
+        "ordinal": 13
+      },
+      {
+        "value": "95034.2783",
+        "fmtValue": "$95,034.28",
+        "ordinal": 14
+      },
+      {
+        "value": "529228276.1186",
+        "fmtValue": "Bs. 529.228.276,12",
+        "ordinal": 15
+      },
+      {
+        "value": "5410570.2144",
+        "fmtValue": "Bs. 5.410.570,21",
+        "ordinal": 16
+      },
+      {
+        "value": "440451128.1686",
+        "fmtValue": "Bs. 440.451.128,17",
+        "ordinal": 17
+      },
+      {
+        "value": "12781057.9048",
+        "fmtValue": "Bs. 12.781.057,90",
+        "ordinal": 18
+      },
+      {
+        "value": "70585519.83",
+        "fmtValue": "Bs. 70.585.519,83",
+        "ordinal": 19
+      },
+      {
+        "value": "1262352.6466",
+        "fmtValue": "R$ 1.262.352,65",
+        "ordinal": 20
+      },
+      {
+        "value": "12961.126",
+        "fmtValue": "R$ 12.961,13",
+        "ordinal": 21
+      },
+      {
+        "value": "1049200.1087",
+        "fmtValue": "R$ 1.049.200,11",
+        "ordinal": 22
+      },
+      {
+        "value": "30561.966",
+        "fmtValue": "R$ 30.561,97",
+        "ordinal": 23
+      },
+      {
+        "value": "169629.445",
+        "fmtValue": "R$ 169.629,45",
+        "ordinal": 24
+      },
+      {
+        "value": "626916.1515",
+        "fmtValue": "$626,916.15",
+        "ordinal": 25
+      },
+      {
+        "value": "6338.1962",
+        "fmtValue": "$6,338.20",
+        "ordinal": 26
+      },
+      {
+        "value": "523499.9517",
+        "fmtValue": "$523,499.95",
+        "ordinal": 27
+      },
+      {
+        "value": "15101.994",
+        "fmtValue": "$15,101.99",
+        "ordinal": 28
+      },
+      {
+        "value": "81976.0088",
+        "fmtValue": "$81,976.01",
+        "ordinal": 29
+      },
+      {
+        "value": "414161.9658",
+        "fmtValue": "€ 414 161,97",
+        "ordinal": 30
+      },
+      {
+        "value": "4177.6439",
+        "fmtValue": "€ 4 177,64",
+        "ordinal": 31
+      },
+      {
+        "value": "346118.1643",
+        "fmtValue": "€ 346 118,16",
+        "ordinal": 32
+      },
+      {
+        "value": "9973.2973",
+        "fmtValue": "€ 9 973,30",
+        "ordinal": 33
+      },
+      {
+        "value": "53892.8592",
+        "fmtValue": "€ 53 892,86",
+        "ordinal": 34
+      },
+      {
+        "value": "3955764.3615",
+        "fmtValue": "$3,955,764.36",
+        "ordinal": 35
+      },
+      {
+        "value": "40022.7429",
+        "fmtValue": "$40,022.74",
+        "ordinal": 36
+      },
+      {
+        "value": "3302132.8101",
+        "fmtValue": "$3,302,132.81",
+        "ordinal": 37
+      },
+      {
+        "value": "95296.3228",
+        "fmtValue": "$95,296.32",
+        "ordinal": 38
+      },
+      {
+        "value": "518312.4846",
+        "fmtValue": "$518,312.48",
+        "ordinal": 39
+      },
+      {
+        "value": "1503763.4492",
+        "fmtValue": "ر.س.‏ 1,503,763.45",
+        "ordinal": 40
+      },
+      {
+        "value": "15170.1402",
+        "fmtValue": "ر.س.‏ 15,170.14",
+        "ordinal": 41
+      },
+      {
+        "value": "1256343.5278",
+        "fmtValue": "ر.س.‏ 1,256,343.53",
+        "ordinal": 42
+      },
+      {
+        "value": "36193.418",
+        "fmtValue": "ر.س.‏ 36,193.42",
+        "ordinal": 43
+      },
+      {
+        "value": "196056.3621",
+        "fmtValue": "ر.س.‏ 196,056.36",
+        "ordinal": 44
+      },
+      {
+        "value": "262180.9726",
+        "fmtValue": "£262,180.97",
+        "ordinal": 45
+      },
+      {
+        "value": "2640.7901",
+        "fmtValue": "£2,640.79",
+        "ordinal": 46
+      },
+      {
+        "value": "219155.1911",
+        "fmtValue": "£219,155.19",
+        "ordinal": 47
+      },
+      {
+        "value": "6309.3139",
+        "fmtValue": "£6,309.31",
+        "ordinal": 48
+      },
+      {
+        "value": "34075.6763",
+        "fmtValue": "£34,075.68",
+        "ordinal": 49
+      },
+      {
+        "value": "400951.8571",
+        "fmtValue": "$400,951.86",
+        "ordinal": 50
+      },
+      {
+        "value": "4044.8814",
+        "fmtValue": "$4,044.88",
+        "ordinal": 51
+      },
+      {
+        "value": "334981.2313",
+        "fmtValue": "$334,981.23",
+        "ordinal": 52
+      },
+      {
+        "value": "9650.376",
+        "fmtValue": "$9,650.38",
+        "ordinal": 53
+      },
+      {
+        "value": "52275.3684",
+        "fmtValue": "$52,275.37",
+        "ordinal": 54
+      },
+      {
+        "value": "48896302.4875",
+        "fmtValue": "¥48,896,302",
+        "ordinal": 55
+      },
+      {
+        "value": "493641.2477",
+        "fmtValue": "¥493,641",
+        "ordinal": 56
+      },
+      {
+        "value": "40844418.8427",
+        "fmtValue": "¥40,844,419",
+        "ordinal": 57
+      },
+      {
+        "value": "1177109.6711",
+        "fmtValue": "¥1,177,110",
+        "ordinal": 58
+      },
+      {
+        "value": "6381132.7251",
+        "fmtValue": "¥6,381,133",
+        "ordinal": 59
+      },
+      {
+        "value": "3322574.4927",
+        "fmtValue": "¥3,322,574.49",
+        "ordinal": 60
+      },
+      {
+        "value": "33518.766",
+        "fmtValue": "¥33,518.77",
+        "ordinal": 61
+      },
+      {
+        "value": "2775894.8499",
+        "fmtValue": "¥2,775,894.85",
+        "ordinal": 62
+      },
+      {
+        "value": "79969.9022",
+        "fmtValue": "¥79,969.90",
+        "ordinal": 63
+      },
+      {
+        "value": "433190.9737",
+        "fmtValue": "¥433,190.97",
+        "ordinal": 64
+      }
+    ]
+  }
+}
