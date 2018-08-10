@@ -56,13 +56,13 @@ def deserialise_jquery_to(obj, k_gen, v):
     return obj
 
 
-def deserialise_jquery(args, re=regex.compile('^([A-Za-z_][A-Za-z0-9_]*)(?:\\[((?:0|[1-9][0-9]*)|(?:[A-Za-z_][A-Za-z0-9_]*)*)\\])*$')):
+def deserialise_jquery(args, re=regex.compile('^([A-Za-z_][A-Za-z0-9_]*)(?:\\[((?:0|[1-9][0-9]*)|(?:[A-Za-z_][A-Za-z0-9_]*)*)\\])*$'), val_map={'true': True, 'false': False}):
     obj = {}
     for k, v in args.items(multi=True):
         match = re.match(k)
         if match:
             ks = (match.captures(i) for i in range(1, len(match.groups()) + 1))
-            obj = deserialise_jquery_to(obj, (k for ks in ks for k in ks), (v == 'true') if v in ('true', 'false') else v)
+            obj = deserialise_jquery_to(obj, (k for ks in ks for k in ks), val_map.get(v, v))
     return obj
 
 
@@ -88,8 +88,8 @@ class DeserialiseJQueryTest(unittest.TestCase):
 
     test_num = 0
 
-    true = True
-    false = False
+    true = 'true'
+    false = 'false'
     undefined = object()
     null = object()
 
@@ -139,7 +139,7 @@ class DeserialiseJQueryTest(unittest.TestCase):
     def do_it(self, original, params, old, query_string, msg):
         cls = self.__class__
         args = cls.url_decode(query_string, cls.BaseRequest.charset, errors=cls.BaseRequest.encoding_errors, cls=MyRequest.parameter_storage_class)
-        d = deserialise_jquery(args)
+        d = deserialise_jquery(args, val_map={})
         self.assertEqual(params if query_string else {}, d,
             '%s:\n\noriginal:\n%s\n\nexpect:\n%s\n\ngot:\n%s' % (msg, cls.pprint.pformat(original), cls.pprint.pformat(params), cls.pprint.pformat(d)))
 
