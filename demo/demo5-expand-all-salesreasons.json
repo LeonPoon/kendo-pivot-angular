@@ -21,7 +21,8 @@
       },
       {
         "name": [
-          "[Date].[Calendar].[Calendar Year].&[2008]"
+          "[Date].[Calendar].[Calendar Year].&[2008]",
+          "[Product].[Category].[All Products]"
         ],
         "expand": true
       },
